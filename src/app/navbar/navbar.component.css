@@ -1,0 +1,52 @@
+#header-main{
+	position: fixed;
+	background-color: white;
+	z-index: 7;
+	left: 0;
+	right: 0;
+}
+
+#logo{
+	height: auto;
+	max-height: 50px;
+	width: 50px;
+  margin-right: 20px;
+}
+
+#account, #logout{
+	color: grey;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+#topbar, #accountCol, #logoutCol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: aller;
+}
+
+#li1, #li2, #li4{
+    float: left;
+}
+
+#pic, #menu, #ingredients, #about, #account, #logout{
+    display: block;
+    color: grey;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#menu:hover, #ingredients:hover, #about:hover, #account:hover, #logout:hover {
+	animation-name: colorChange;
+	animation-duration: 1s;
+  color: blue;
+  cursor: pointer;
+;
+}
+
+#menu, #ingredients, #about, #accountCol, #logoutCol{
+	margin-top: 17px;
+}

@@ -1,0 +1,58 @@
+body{
+	padding-top: 100px;
+}
+
+h3{
+	font-family: aller;
+	color: #1B1B75;
+}
+
+#mainPic{
+	height: 400px;
+	width: 555px;
+  padding-top:20px;
+}
+
+#descRow{
+	font-family: aller;
+	color: #9A9AA7;
+	text-align: center;
+}
+
+#clock, #serving, #nutrition, #price{
+	height: 50px;
+	width: 50px;
+}
+
+#ingredientNeeded{
+  text-align: center;
+  font-family: aller;
+  color: #9A9AA7;
+}
+
+#text1{
+  font-family: aller;
+  color: #9A9AA7;
+  font-size: 2em;
+}
+
+#ins{
+  font-family: aller;
+  color: #9A9AA7;
+  padding-top: 105px;
+}
+
+#modalButt{
+  margin-top: 20px;
+}
+
+#quantity_text, #address_text, #phone_text, #total_price_text, #payment_text{
+  font-family: aller;
+  color: #9A9AA7;
+  font-size: 17px;
+  padding-top: 3px;
+}
+
+#row1, #row2, #row3, #row4, #row5{
+  margin-bottom: 10px;
+}

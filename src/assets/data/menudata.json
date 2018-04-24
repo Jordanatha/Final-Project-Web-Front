@@ -1,0 +1,28 @@
+[
+	{
+		"id": 1,
+		"name": "Wagyu beef steak",
+		"image": "download",
+		"chef": "Jordanatha"
+	},
+
+	{
+		"id": 2,
+		"name": "Wagyu hi marbling",
+		"image": "steak",
+		"chef": "Dylan"
+	},
+	{
+		"id": 3,
+		"name": "Sweet Potato",
+		"image": "sweet potato",
+		"chef": "Willy"
+	},
+
+	{
+		"id": 4,
+		"name": "sandwich",
+		"image": "sandwich",
+		"chef": "Hantze"
+	}
+]

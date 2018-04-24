@@ -1,0 +1,21 @@
+<header class="ios-app-hide" id="header-main">
+	<div class="container">
+		<div class="col-sm-8">
+			<ul id="topbar">
+		  		<li id="li1"><a routerLink = "/home" id="pic"><img src="http://cdn.onlinewebfonts.com/svg/img_561110.png" id="logo"></a></li>
+				  <li id="li2"><a routerLink = "/menu" id="menu">On the Menu</a></li>
+				  <li id="li4"><a routerLink="/about-us" id="about">About Us</a></li>
+			</ul>
+		</div>
+		<div class="col-sm-2" *ngIf="!isLogin">
+			<ul id="accountCol">
+				<li id="li5"><a routerLink="/login" id="account">Account</a></li>
+			</ul>
+		</div>
+    <div class="col-sm-2" *ngIf="isLogin">
+      <ul id="logoutCol">
+        <li id="li6"><p id="logout" (click)="logout()">Logout</p></li>
+      </ul>
+    </div>
+	</div>
+</header>

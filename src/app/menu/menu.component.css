@@ -1,0 +1,25 @@
+body{
+	padding-top: 120px;
+}
+
+img{
+	width: 281px;
+	object-fit: fill;
+	object-position: 50% 50%;
+	height: 183px;
+
+}
+
+h4{
+	font-family: aller;
+	color: #8181F7;
+	margin-bottom: 40px;
+}
+
+@font-face{
+	font-family: aller;
+}
+
+.img-thumbnail{
+	margin-bottom: 10px;
+}

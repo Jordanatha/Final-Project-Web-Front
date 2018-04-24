@@ -1,0 +1,18 @@
+<body>
+	<div class="container">
+
+		<div *ngFor="let menus of menudata">
+			<div class="col-sm-4">
+				<a href="/recipe/{{menus.id}}">
+
+					<div class="img-thumbnail">
+						<img src="{{menus.image}}">
+						<h4>{{menus.food_name}}</h4>
+					</div>
+				</a>
+			</div>
+ <!-- we want to bind a prop called menus and we want to pass into it, the menus that currently in the iteration ! -->
+		</div>
+		<!--<img src="{{data.image}}" /> <div>{{data.name}}</div>!-->
+	</div>
+</body>

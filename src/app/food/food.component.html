@@ -1,0 +1,126 @@
+<body>
+  <div class="container">
+    <ng-container *ngIf="obj">
+      <div class="col-sm-6">
+        <h3>{{obj.food_name}}</h3>
+        <h5>By Chef {{chef_data.chef_name}}</h5>
+        <hr>
+          <div class="row" id="descRow">
+            <div class="col-sm-3">Time
+              <div class="row" id="timePic">
+                <img src="http://www.kaptest.co.uk/sites/kaptest.co.uk/files/pictures/icon-clock-grey.png" id="clock">
+              </div>
+              <div class="row" id="time">{{obj.prep_time}} mins</div>
+            </div>
+
+            <div class="col-sm-3">Servings
+              <div class="row" id="servingPic">
+                <img src="http://www.pngmart.com/files/1/Spoon-And-Fork-Transparent-Background.png" id="serving">
+              </div>
+              <div class="row" id="servings">{{obj.servings}}</div>
+            </div>
+
+            <div class="col-sm-3">Nutritions
+              <div class="row" id="nutritionsPic">
+                <img src="http://www.ecomaniacs.co.za/assets/base/img/content/line-icons/water-drop.png" id="nutrition">
+              </div>
+              <div class="row" id="nutritionServed">{{obj.nutritions}} calories</div>
+            </div>
+
+            <div class="col-sm-3">Price
+              <div class="row" id="pricePic">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjy15lzuS0x4HtYXpAsjmp9zyECWhUf4748TZtyJuy7sVWpOVd" id="price">
+              </div>
+              <div class="row" id="foodPrice">$ {{obj.price}}</div>
+            </div>
+          </div>
+        <hr>
+
+        <h3>Ingredients Needed:</h3>
+
+        <div *ngFor = "let ingredients of ingredients_data">
+          <div class="col-sm-6" id="ingredientNeeded">
+            <p>{{ingredients.quantity}}</p>
+            <p>{{ingredients.ingredient_name}}</p>
+          </div>
+        </div>
+        <div id="ins">
+          <a href="{{instruction_data.instruction}}" target="_blank">Click here for more further instructions</a>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <img src="{{obj.image}}" id="mainPic">
+      </div>
+
+
+      <div class="col-sm-12">
+        <a href="/login" class="btn btn-info btn-lg" *ngIf="!isLogin">Buy Now</a>
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="modalButt" *ngIf="isLogin">Buy Now</button>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Purchase</h4>
+              </div>
+              <div class="modal-body">
+                <div class="row" id="row1">
+                  <div class="col-sm-6" id="quantity_text" required>
+                    <p>Quantity</p>
+                  </div>
+                  <div class="col-sm-6">
+                    <input type="text" [(ngModel)]="input_quantity" name="inputText" class="form-control" (input)="changeQuantity($event)">
+                  </div>
+                </div>
+
+                <div class="row" id="row2">
+                  <div class="col-sm-6" id="address_text">
+                    <p>Address</p>
+                  </div>
+                  <div class="col-sm-6">
+                    <input type="text" [(ngModel)]="input_address" name="addressText" class="form-control">
+                  </div>
+                </div>
+
+                <div class="row" id="row3">
+                  <div class="col-sm-6" id="phone_text">
+                    <p>Phone Number</p>
+                  </div>
+                  <div class="col-sm-6">
+                    <input type="text" [(ngModel)]="input_phone" name="phoneText" class="form-control">
+                  </div>
+                </div>
+
+                <div class="row" id="row4">
+                  <div class="col-sm-6" id="total_price_text">
+                    <p>Total Price</p>
+                  </div>
+                  <div class="col-sm-6">
+                    <input type="text" [(ngModel)]="input_total_price" name="totalPriceText" class="form-control" disabled [value]="input_quantity * obj.price">
+                  </div>
+                </div>
+
+                <div class="row" id="row5">
+                  <div class="col-sm-6" id="payment_text">
+                    <p>Payment Method</p>
+                  </div>
+                  <div class="col-sm-6">
+                    <input type="text" [(ngModel)]="input_payment" name="paymentMethod" class="form-control" disabled>
+                  </div>
+                </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" (click)="submitData()">Buy!</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </ng-container>
+  </div>
+</body>

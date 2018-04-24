@@ -1,0 +1,26 @@
+body{
+	padding-top: 80px;
+	overflow-x: hidden;
+	font-family: aller;
+}
+
+#foto{
+	margin:0;
+	position: relative;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;
+}
+
+#who{
+	font-size: 3em;
+	color: #54C8EE;
+	text-align: center;
+}
+
+#desc{
+	font-size: 1.3em;
+	text-align: center;
+	color: #8B989C;
+}
